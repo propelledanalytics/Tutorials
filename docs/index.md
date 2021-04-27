@@ -1,5 +1,13 @@
 # SparkSQL.jl Blog
-Welcome to the Tutorials repo.
+
+Welcome to the SparkSQL.jl Blog. This blog will teach Julia developers best practices for using the SparkSQL.jl package. The first tutorial is a Pluto Notebook containing code on how to perform the most essential SparkSQL.jl tasks.     
+
+The official SparkSQL.jl project page is located here:
+- https://github.com/propelledanalytics/SparkSQL.jl
+
+The tutorial page for SparkSQL.jl is here:
+- https://github.com/propelledanalytics/Tutorials
+
 
 ## SparkSQL.jl Tutorials 
 The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data.
@@ -21,7 +29,8 @@ To run the notebook:
 8. Download the tutorial Notebook and sample data from this repository. In Pluto, navigate to where you saved the tutorial notebook.
 9. The notebook will run automatically. The code shows the commonly used features so you can use that as the basis of your SparkSQL.jl and Julia projects.
 
-The output of the tutorial notebook will be:
+The output of the tutorial notebook is:
+
 ![Tutorial00](img/00.png)
 ![Tutorial01](img/01.png)
 ![Tutorial02](img/02.png)
