@@ -22,5 +22,8 @@ To run the notebook:
 9. The notebook will run automatically. The code shows the commonly used features so you can use that as the basis of your SparkSQL.jl and Julia projects.
 
 The output of the tutorial notebook will be:
-
-![Notebook](/img/00.png)
+![Tutorial00](img/00.png)
+![Tutorial01](img/01.png)
+![Tutorial02](img/02.png)
+![Tutorial03](img/03.png)
+![Tutorial04](img/04.png)
