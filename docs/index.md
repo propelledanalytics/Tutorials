@@ -3,10 +3,10 @@
 Welcome to the SparkSQL.jl Blog. This blog will teach Julia developers best practices for using the SparkSQL.jl package. The first tutorial is a Pluto Notebook containing code on how to perform the most essential SparkSQL.jl tasks.     
 
 The official SparkSQL.jl project page is located here:
-- https://github.com/propelledanalytics/SparkSQL.jl
+- [https://github.com/propelledanalytics/SparkSQL.jl](https://github.com/propelledanalytics/SparkSQL.jl)
 
 The tutorial page for SparkSQL.jl is here:
-- https://github.com/propelledanalytics/Tutorials
+- [https://github.com/propelledanalytics/Tutorials](https://github.com/propelledanalytics/Tutorials)
 
 
 ## SparkSQL.jl Tutorials 
