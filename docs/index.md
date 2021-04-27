@@ -26,7 +26,7 @@ To run the notebook:
    - `] add SparkSQL; add DataFrames; add Decimals; add Pluto;`
 7. Launch the Pluto notebook:
    - `Using Pluto; Pluto.run();`
-8. Download the tutorial Notebook and sample data from this repository. In Pluto, navigate to where you saved the tutorial notebook.
+8. Download the tutorial Notebook and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebook.
 9. The notebook will run automatically. The code shows the commonly used features so you can use that as the basis of your SparkSQL.jl and Julia projects.
 
 The output of the tutorial notebook is:
