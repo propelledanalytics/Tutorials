@@ -9,9 +9,10 @@ The tutorial page for SparkSQL.jl is here:
 - [https://github.com/propelledanalytics/Tutorials](https://github.com/propelledanalytics/Tutorials)
 
 
-## SparkSQL.jl Tutorials 
-The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data.
-To run the notebook:
+
+# SparkSQL.jl Tutorial Setup
+The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data. To run the Pluto notebook tutorial you must setup Apache Spark and your Julia environment:
+
 1. Install Apache Spark 3.1.1 or later: http://spark.apache.org/downloads.html
 2. Install either OpenJDK 8 or 11: https://adoptopenjdk.net/
 3. Setup your JAVA_HOME and SPARK_HOME enviroment variables: 
@@ -29,7 +30,7 @@ To run the notebook:
 8. Download the tutorial Notebook and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebook.
 9. The notebook will run automatically. The code shows the commonly used features so you can use that as the basis of your SparkSQL.jl and Julia projects.
 
-The output of the tutorial notebook is:
+### The output of the tutorial notebook is:
 
 ![Tutorial00](img/00.png)
 ![Tutorial01](img/01.png)
