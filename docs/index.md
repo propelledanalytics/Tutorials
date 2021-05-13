@@ -9,9 +9,19 @@ The tutorial page for SparkSQL.jl is here:
 - [https://github.com/propelledanalytics/Tutorials](https://github.com/propelledanalytics/Tutorials)
 
 
+## Top 3 benefits of using the SparkSQL.jl Julia package:
+SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons why data science work:
 
-# SparkSQL.jl Tutorial Setup
-The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data. To run the Pluto notebook tutorial you must setup Apache Spark and your Julia environment:
+1. Julia is a modern programming language that has state-of-the art data science packages and is much faster than Python.                           
+
+2. Apache Spark is one of the world's most ubiquitous open-source big data processing platforms. SparkSQL.jl allows Julia programmers to create Spark applications in Julia.
+
+3. Used together Julia and Apache Spark form the ultimate data science platform. SparkSQL.jl makes it happen.
+
+
+
+## Introduction to SparkSQL.jl tutorial:
+The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data. To run the Pluto notebook tutorial, setup Apache Spark and your Julia environment:
 
 1. Install Apache Spark 3.1.1 or later: [http://spark.apache.org/downloads.html](https://adoptopenjdk.net/)
 2. Install either OpenJDK 8 or 11: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
@@ -31,9 +41,8 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 9. The notebook will run automatically. The code shows the commonly used features so you can use that as the basis of your SparkSQL.jl and Julia projects.
 
 ### The output of the tutorial notebook is:
-
-![Tutorial00](img/00.png)
-![Tutorial01](img/01.png)
-![Tutorial02](img/02.png)
-![Tutorial03](img/03.png)
-![Tutorial04](img/04.png)
+<img src="img/00.png" width="720" height="1105" />
+<img src="img/01.png" width="720" height="1138" />
+<img src="img/02.png" width="720" height="462" />
+<img src="img/03.png" width="720" height="1402" />
+<img src="img/04.png" width="720" height="245" />
