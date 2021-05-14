@@ -10,13 +10,13 @@ The tutorial page for SparkSQL.jl is here:
 
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package:
-SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons why data science work:
+SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons to use Julia with Spark for data science:
 
 1. Julia is a modern programming language that has state-of-the art data science packages and is much faster than Python.                           
 
 2. Apache Spark is one of the world's most ubiquitous open-source big data processing platforms. SparkSQL.jl allows Julia programmers to create Spark applications in Julia.
 
-3. Used together Julia and Apache Spark form the ultimate data science platform. SparkSQL.jl makes it happen.
+3. Used together, Julia with Apache Spark forms the most advanced data science platform. SparkSQL.jl makes it happen.
 
 
 
