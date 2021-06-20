@@ -11,9 +11,11 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 
 3. [SparkSQL.jl and tutorials environment setup](#sparksqljl-and-tutorials-environment-setup)
 
-4. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+4. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
 
-5. [Working with data tutorial](#working-with-data-tutorial)
+5. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+
+6. [Working with data tutorial](#working-with-data-tutorial)
 
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package
@@ -39,7 +41,7 @@ The official tutorial page for SparkSQL.jl is here:
 
 The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data. To run the Pluto notebook tutorials, setup Apache Spark and your Julia environment:
 
-1. Install Apache Spark 3.1.1 or later: [http://spark.apache.org/downloads.html](https://adoptopenjdk.net/)
+1. Install Apache Spark 3.1.2 or later: [http://spark.apache.org/downloads.html](https://adoptopenjdk.net/)
 2. Install either OpenJDK 8 or 11: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 3. Setup your JAVA_HOME and SPARK_HOME enviroment variables: 
    - `export JAVA_HOME=/path/to/java` 
@@ -55,6 +57,46 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
    - `Using Pluto; Pluto.run();`
 8. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
 9. The notebooks will run automatically. 
+
+
+## SparkSQL.jl release 1.0.0 announcement
+
+This post is announcing the availability of the SparkSQL.jl package.
+
+SparkSQL.jl is an open-source software package that enables the Julia programming language to work with Apache Spark using just SQL and Julia.
+
+Apache Spark is one of the world’s most ubiquitous open-source big data processing engines. Spark’s distributed processing power enables it to process very large datasets. Apache Spark runs on many platforms and hardware architectures including those used by large enterprise and government. By utilizing SparkSQL.jl, Julia can program Spark clusters running on:
+
+- Enterprise: IBM POWER, z/Architecture (mainframe), x86, ARM, and SPARC
+- HPC: POWER 9 with NVLINK and CAPI
+- Cloud: Azure, AWS, Google GCP, IBM Cloud, and Oracle Cloud (OCI).
+
+Released in 2012, Julia is a modern programming language ideally suited for data science and machine learning workloads. Expertly designed, Julia is a highly performant language. It sports multiple-dispatch, auto-differentiation and a rich ecosystem of packages.
+
+SparkSQL.jl provides the functionality that enables using Apache Spark and Julia together for tabular data. With SparkSQL.jl, Julia takes the place of Python for data science and machine learning work on Spark. Apache Spark data science tooling that is free from the limitations of Python represents a substantial upgrade.
+
+For decision makers, SparkSQL.jl is the safe choice in data science tooling modernization. Julia interoperates with Python. That means legacy code investments are protected while gaining new capabilities.
+
+The SparkSQL.jl package is designed to support many advanced features including Delta Lake. Delta Lake architecture is a best practice for multi-petabyte and trillion+ row datasets. The focus on tabular data using SQL means the Spark RDD API is not supported.
+
+You can install SparkSQL.jl via the Julia REPL:
+
+```
+] add SparkSQL
+```
+Example usage:
+
+```
+JuliaDataFrame = DataFrame(tickers = ["CRM", "IBM"])
+onSpark = toSparkDS(sprk, JuliaDataFrame)
+createOrReplaceTempView(onSpark, "julia_data")
+query = sql(sprk, "SELECT * FROM spark_data WHERE TICKER IN (SELECT * FROM julia_data)")
+results = toJuliaDF(query)
+describe(results)
+```
+Official Project Page:
+- [https://github.com/propelledanalytics/SparkSQL.jl](https://github.com/propelledanalytics/SparkSQL.jl)
+
 
 ## Introduction to SparkSQL.jl tutorial
 
