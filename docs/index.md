@@ -11,11 +11,13 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 
 3. [SparkSQL.jl and tutorials environment setup](#sparksqljl-and-tutorials-environment-setup)
 
-4. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
+4. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
 
-5. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+5. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
 
-6. [Working with data tutorial](#working-with-data-tutorial)
+6. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+
+7. [Working with data tutorial](#working-with-data-tutorial)
 
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package
@@ -58,6 +60,24 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 8. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
 9. The notebooks will run automatically. 
 
+
+## SparkSQL.jl release 1.1.0 announcement
+
+This post is announcing the release of SparkSQL.jl is 1.1.0. The new features of this release are:
+
+- DataFrames 1.2.2 support
+- A new progress meter that shows time elapsed and row count metrics. The progress meter provides visibility to processing status when moving larger datasets between Julia and Spark. 
+
+Install SparkSQL.jl via the Julia REPL:
+
+```
+] add SparkSQL
+```
+Update from earlier releases of SparkSQL.jl via the Julia REPL:
+```
+] update SparkSQL
+update DataFrames
+```
 
 ## SparkSQL.jl release 1.0.0 announcement
 
