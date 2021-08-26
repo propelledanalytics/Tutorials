@@ -63,7 +63,7 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 
 ## SparkSQL.jl release 1.1.0 announcement
 
-This post is announcing the release of SparkSQL.jl 1.1.0. The new features of this release are:
+This post is announcing the release of SparkSQL.jl 1.1.0. New features of this release are:
 
 - DataFrames 1.2.2 support
 - A new progress meter that shows time elapsed and row count metrics. The progress meter provides visibility to processing status when moving larger datasets between Julia and Spark. 
