@@ -19,6 +19,7 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 
 7. [Working with data tutorial](#working-with-data-tutorial)
 
+8. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package
 SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons to use Julia with Spark for data science:
@@ -159,3 +160,20 @@ Download the tutorial:
 <img src="img/06.png" width="720" height="688" />
 <img src="img/07.png" width="720" height="679" />
 <img src="img/08.png" width="720" height="710" />
+
+## Machine learning with SparkSQL.jl tutorial
+
+The machine learning with SparkSQL tutorial covers:
+- Using SparkSQL.jl to create training and test datasets
+- Building a logistic regression machine learning model 
+- Training and evaluating the model
+- Using the model to make predictions
+
+
+Download the tutorial:
+[Tutorial_02_MachineLearning_Notebook.jl](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL/Tutorial_02_MachineLearning_Notebook.jl)
+
+### Notebook output:
+<img src="img/09.png" width="720" height="1149" />
+<img src="img/10.png" width="720" height="898" />
+<img src="img/11.png" width="720" height="602" />
