@@ -45,7 +45,9 @@ The official tutorial page for SparkSQL.jl is here:
 The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data. To run the Pluto notebook tutorials, setup Apache Spark and your Julia environment:
 
 1. Install Apache Spark 3.1.2 or later: [http://spark.apache.org/downloads.html](http://spark.apache.org/downloads.html)
-2. Install either OpenJDK 8 or 11: [https://adoptium.net](https://adoptium.net)
+2. Install either OpenJDK 8 or 11: 
+   - https://developer.ibm.com/languages/java/semeru-runtimes/downloads (OpenJ9)
+   - https://adoptium.net
 3. Setup your JAVA_HOME and SPARK_HOME enviroment variables: 
    - `export JAVA_HOME=/path/to/java` 
    - `export SPARK_HOME=/path/to/Apache/Spark`
@@ -64,7 +66,17 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 
 ## SparkSQL.jl release 1.1.0 announcement
 
-This post is announcing the release of SparkSQL.jl 1.1.0. New features of this release are:
+This post is announcing the release of SparkSQL.jl version 1.1.0.
+
+SparkSQL.jl is software that enables Julia programs to work with Apache Spark using just SQL.
+
+Apache Spark is one of the world’s most ubiquitous open-source big data processing engines. Spark’s distributed processing power enables it to process very large datasets. Apache Spark runs on many platforms and hardware architectures including those used by large enterprise and government.
+
+Released in 2012, Julia is a modern programming language ideally suited for data science and machine learning workloads. Expertly designed, Julia is a highly performant language. It sports multiple-dispatch, auto-differentiation and a rich ecosystem of packages.
+
+SparkSQL.jl provides the functionality that enables using Apache Spark and Julia together for tabular data. With SparkSQL.jl, Julia takes the place of Python for data science and machine learning work on Spark.
+
+New features of this release are:
 
 - DataFrames 1.2.2 support
 - A new progress meter that shows time elapsed and row count metrics. The progress meter provides visibility to processing status when moving larger datasets between Julia and Spark. 
@@ -79,6 +91,19 @@ Update from earlier releases of SparkSQL.jl via the Julia REPL:
 ] update SparkSQL
 update DataFrames
 ```
+
+Example usage:
+```
+JuliaDataFrame = DataFrame(tickers = ["CRM", "IBM"])
+onSpark = toSparkDS(sprk, JuliaDataFrame)
+createOrReplaceTempView(onSpark, "julia_data")
+query = sql(sprk, "SELECT * FROM spark_data WHERE TICKER IN (SELECT * FROM julia_data)")
+results = toJuliaDF(query)
+describe(results)
+```
+Official Project Page:
+- [https://github.com/propelledanalytics/SparkSQL.jl](https://github.com/propelledanalytics/SparkSQL.jl)
+
 
 ## SparkSQL.jl release 1.0.0 announcement
 
