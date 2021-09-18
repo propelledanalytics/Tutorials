@@ -51,17 +51,19 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 3. Setup your JAVA_HOME and SPARK_HOME enviroment variables: 
    - `export JAVA_HOME=/path/to/java` 
    - `export SPARK_HOME=/path/to/Apache/Spark`
-4. Start Apache Spark (note using default values):
-   - /path/to/Apache/Spark/sbin/start-master.sh
-   - /path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070
-5. Ensure your JAVA_HOME and SPARK_HOME are set and then start Julia:
+4. If using OpenJDK 11 on Linux set processReaperUseDefaultStackSize to true: 
+    - `export _JAVA_OPTIONS='-Djdk.lang.processReaperUseDefaultStackSize=true'`
+5. Start Apache Spark (note using default values):
+   - `/path/to/Apache/Spark/sbin/start-master.sh`
+   - `/path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070`
+6. Ensure your JAVA_HOME and SPARK_HOME are set and then start Julia:
    - `JULIA_COPY_STACKS=yes julia`
-6. Install SparkSQL.jl along with other required Julia Packages:
+7. Install SparkSQL.jl along with other required Julia Packages:
    - `] add SparkSQL; add DataFrames; add Decimals; add Dates; add Pluto;`
-7. Launch the Pluto notebook:
+8. Launch the Pluto notebook:
    - `Using Pluto; Pluto.run();`
-8. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
-9. The notebooks will run automatically. 
+9. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
+10. The notebooks will run automatically. 
 
 
 ## SparkSQL.jl release 1.1.0 announcement
