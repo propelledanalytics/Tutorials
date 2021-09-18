@@ -16,7 +16,7 @@ To run the notebook:
 5. Start Apache Spark (note using default values):
    - `/path/to/Apache/Spark/sbin/start-master.sh`
    - `/path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070`
-6. Ensure your JAVA_HOME and SPARK_HOME are set and then start Julia:
+6. Start Julia with "JULIA_COPY_STACKS=yes" required for JVM interop:
    - `JULIA_COPY_STACKS=yes julia`
 7. Install SparkSQL.jl along with other required Julia Packages:
    - `] add SparkSQL; add DataFrames; add Decimals; add Pluto;`
