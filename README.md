@@ -14,8 +14,8 @@ To run the notebook:
 4. If using OpenJDK 11 on Linux set processReaperUseDefaultStackSize to true: 
     - `export _JAVA_OPTIONS='-Djdk.lang.processReaperUseDefaultStackSize=true'`
 5. Start Apache Spark (note using default values):
-   - /path/to/Apache/Spark/sbin/start-master.sh
-   - /path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070
+   - `/path/to/Apache/Spark/sbin/start-master.sh`
+   - `/path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070`
 6. Ensure your JAVA_HOME and SPARK_HOME are set and then start Julia:
    - `JULIA_COPY_STACKS=yes julia`
 7. Install SparkSQL.jl along with other required Julia Packages:
