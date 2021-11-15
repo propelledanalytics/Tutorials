@@ -44,7 +44,7 @@ The official tutorial page for SparkSQL.jl is here:
 
 The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sample data. To run the Pluto notebook tutorials, setup Apache Spark and your Julia environment:
 
-1. Install Apache Spark 3.1.2 or later: [http://spark.apache.org/downloads.html](http://spark.apache.org/downloads.html)
+1. Install Apache Spark 3.2.0 or later: [http://spark.apache.org/downloads.html](http://spark.apache.org/downloads.html)
 2. Install either OpenJDK 8 or 11: 
    - [https://developer.ibm.com/languages/java/semeru-runtimes/downloads](https://developer.ibm.com/languages/java/semeru-runtimes/downloads) (OpenJ9)
    - [https://adoptium.net](https://adoptium.net)
