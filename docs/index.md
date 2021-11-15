@@ -86,7 +86,7 @@ New features of this release are:
 
 - Kubernetes support.
 - Apache Spark 3.2.0 support.
-- JDK 17 support.
+- JDK 17 support for Spark 3.2.0 on SparkSQL.jl kubernetes.
 
 Install SparkSQL.jl via the Julia REPL:
 
