@@ -11,15 +11,19 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 
 3. [SparkSQL.jl and tutorials environment setup](#sparksqljl-and-tutorials-environment-setup)
 
-4. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
+### Releases:
+4. [SparkSQL.jl release 1.2.0 announcement](#sparksqljl-release-120-announcement)
 
-5. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
+5. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
 
-6. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+6. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
 
-7. [Working with data tutorial](#working-with-data-tutorial)
+### Tutorials:
+7. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
 
-8. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
+8. [Working with data tutorial](#working-with-data-tutorial)
+
+9. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package
 SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons to use Julia with Spark for data science:
@@ -64,6 +68,48 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
    - `Using Pluto; Pluto.run();`
 9. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
 10. The notebooks will run automatically. 
+
+
+## SparkSQL.jl release 1.2.0 announcement
+
+This post is announcing the release of SparkSQL.jl version 1.2.0.
+
+SparkSQL.jl is software that enables Julia programs to work with Apache Spark using just SQL.
+
+Apache Spark is one of the world’s most ubiquitous open-source big data processing engines. Spark’s distributed processing power enables it to process very large datasets. Apache Spark runs on many platforms and hardware architectures including those used by large enterprise and government.
+
+Released in 2012, Julia is a modern programming language ideally suited for data science and machine learning workloads. Expertly designed, Julia is a highly performant language. It sports multiple-dispatch, auto-differentiation and a rich ecosystem of packages.
+
+SparkSQL.jl provides the functionality that enables using Apache Spark and Julia together for tabular data. With SparkSQL.jl, Julia takes the place of Python for data science and machine learning work on Spark.
+
+New features of this release are:
+
+- Kubernetes support.
+- Apache Spark 3.2.0 support.
+- JDK 17 support.
+
+Install SparkSQL.jl via the Julia REPL:
+
+```
+] add SparkSQL
+```
+Update from earlier releases of SparkSQL.jl via the Julia REPL:
+```
+] update SparkSQL
+update DataFrames
+```
+
+Example usage:
+```
+JuliaDataFrame = DataFrame(tickers = ["CRM", "IBM"])
+onSpark = toSparkDS(sprk, JuliaDataFrame)
+createOrReplaceTempView(onSpark, "julia_data")
+query = sql(sprk, "SELECT * FROM spark_data WHERE TICKER IN (SELECT * FROM julia_data)")
+results = toJuliaDF(query)
+describe(results)
+```
+Official Project Page:
+- [https://github.com/propelledanalytics/SparkSQL.jl](https://github.com/propelledanalytics/SparkSQL.jl)
 
 
 ## SparkSQL.jl release 1.1.0 announcement
