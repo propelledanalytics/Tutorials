@@ -20,7 +20,7 @@ To run the notebook:
    - `/path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070`
 6. Start Julia with "JULIA_COPY_STACKS=yes" required for JVM interop:
    - `JULIA_COPY_STACKS=yes julia`
-4. If using Julia on MacOS start with handle-signals=no: 
+4. If using Julia on MacOS start with "handle-signals=no": 
     - `JULIA_COPY_STACKS=yes julia --handle-signals=no`
 7. Install SparkSQL.jl along with other required Julia Packages:
    - `] add SparkSQL; add DataFrames; add Decimals; add Pluto;`
