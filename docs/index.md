@@ -63,13 +63,15 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
    - `/path/to/Apache/Spark/sbin/start-worker.sh --master localhost:7070`
 6. Start Julia with "JULIA_COPY_STACKS=yes" required for JVM interop:
    - `JULIA_COPY_STACKS=yes julia`
-7. Install SparkSQL.jl along with other required Julia Packages:
+7. If using Julia on MacOS start with "handle-signals=no": 
+    - `JULIA_COPY_STACKS=yes julia --handle-signals=no`
+8. Install SparkSQL.jl along with other required Julia Packages:
    - `] add SparkSQL; add DataFrames; add Decimals; add Dates; add Pluto;`
 ### Usage
-8. Launch the Pluto notebook:
+9. Launch the Pluto notebook:
    - `Using Pluto; Pluto.run();`
-9. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
-10. The notebooks will run automatically. 
+10. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
+11. The notebooks will run automatically. 
 
 
 ## SparkSQL.jl release 1.2.0 announcement
