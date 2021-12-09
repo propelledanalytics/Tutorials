@@ -12,18 +12,20 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 3. [SparkSQL.jl and tutorials environment setup](#sparksqljl-and-tutorials-environment-setup)
 
 ### Releases:
-4. [SparkSQL.jl release 1.2.0 announcement](#sparksqljl-release-120-announcement)
+4. [SparkSQL.jl release 1.3.0 announcement](#sparksqljl-release-130-announcement)
 
-5. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
+5. [SparkSQL.jl release 1.2.0 announcement](#sparksqljl-release-120-announcement)
 
-6. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
+6. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
+
+7. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
 
 ### Tutorials:
-7. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+8. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
 
-8. [Working with data tutorial](#working-with-data-tutorial)
+9. [Working with data tutorial](#working-with-data-tutorial)
 
-9. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
+10. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package
 SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons to use Julia with Spark for data science:
@@ -73,6 +75,58 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 10. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
 11. The notebooks will run automatically. 
 
+
+## SparkSQL.jl release 1.3.0 announcement
+
+This post is announcing the release of SparkSQL.jl version 1.3.0. 
+
+### About SparkSQL.jl
+SparkSQL.jl is software that enables developers to use the Julia programming language with the Apache Spark data processing engine. 
+
+Apache Spark is one of the world’s most ubiquitous open-source big data processing engines. Spark’s distributed processing power enables it to process very large datasets. Apache Spark runs on many platforms and hardware architectures including those used by large enterprise and government.
+
+Released in 2012, Julia is a modern programming language ideally suited for data science and machine learning workloads. Expertly designed, Julia is a highly performant language. It sports multiple-dispatch, auto-differentiation and a rich ecosystem of packages.
+
+### Use Case
+Submits *Structured Query Language* (SQL), *Data Manipulation Language* (DML) and *Data Definition Language* (DDL) statements to Apache Spark.
+Has functions to move data from Spark into Julia DataFrames and Julia DataFrame data into Spark. 
+
+SparkSQL.jl delivers advanced features like dynamic horizontal autoscaling that scale compute nodes to match workload requirements (1). This package supports structured and semi-structured data in Data Lakes, Lakehouses (Delta Lake, Iceberg) on premise and in the cloud. To maximize java virtual machine performance, SparkSQL.jl brings support for the latest Java JDK-17 to Spark 3.2.0 (2). 
+
+New features of this release are:
+
+- Julia version 1.7 support.
+- DataFrames 1.3.0 support. 
+
+Install SparkSQL.jl via the Julia REPL:
+
+```
+] add SparkSQL
+```
+Update from earlier releases of SparkSQL.jl via the Julia REPL:
+```
+] update SparkSQL
+update DataFrames
+```
+
+Example usage:
+```
+JuliaDataFrame = DataFrame(tickers = ["CRM", "IBM"])
+onSpark = toSparkDS(sprk, JuliaDataFrame)
+createOrReplaceTempView(onSpark, "julia_data")
+query = sql(sprk, "SELECT * FROM spark_data WHERE TICKER IN (SELECT * FROM julia_data)")
+results = toJuliaDF(query)
+describe(results)
+```
+
+To learn more visit the Official Project Page:
+- [https://github.com/propelledanalytics/SparkSQL.jl](https://github.com/propelledanalytics/SparkSQL.jl)
+
+(1) The SparkSQL.jl compute node autoscaling feature is based on Kubernetes. For SparkSQL.jl on Kubernetes setup instructions see:
+[SparkSQL.jl kubernetes readme](https://github.com/propelledanalytics/SparkSQL.jl/blob/main/kubernetes/README.md)
+
+(2) JDK-17 support is provided as a podman container file: 
+[Containerfile-JDK-17](https://github.com/propelledanalytics/SparkSQL.jl/blob/main/kubernetes/Containerfile-JDK-17)
 
 ## SparkSQL.jl release 1.2.0 announcement
 
