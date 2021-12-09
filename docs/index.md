@@ -27,6 +27,8 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 
 10. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
 
+11. [Scaling compute on SparkSQL.jl tutorial](#scaling-compute-on-sparksqljl-tutorial)
+
 ## Top 3 benefits of using the SparkSQL.jl Julia package
 SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons to use Julia with Spark for data science:
 
@@ -308,3 +310,33 @@ Download the tutorial:
 <img src="img/09.png" width="720" height="1149" />
 <img src="img/10.png" width="720" height="898" />
 <img src="img/11.png" width="720" height="602" />
+
+
+## Scaling compute on SparkSQL.jl tutorial
+Take the guess work out of big data performance tuning. SparkSQL.jl supports dynamic autoscaling that matches compute node size to your workload.  Ensure maximum performance at optimal cost by having the system scale worker nodes up and down to meet demand.
+
+<img src="img/12.png" width="777" height="367" />
+
+### Adjusting resource settings:
+You set the maximum and minimum node sizes. Based on utilization, the system will autoscale within those parameters. Meet cost targets and service level agreement (SLA) requirements.
+
+via YAML File:
+```
+kubectl apply -f spark-worker-hpa.yaml
+```
+
+via command line:
+
+```
+kubectl autoscale deployment spark-worker --min-1 --max=4 --cpu-percent=90
+```
+<img src="img/13.png" width="835" height="218" />
+
+### Monitoring via the command line:
+```
+kubectl get deployments, hpa
+```
+or monitor continuously:
+```
+watch kubectl get deployments, hpa
+```
