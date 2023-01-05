@@ -12,22 +12,24 @@ Welcome to the official SparkSQL.jl Blog. This blog teaches Julia developers bes
 3. [SparkSQL.jl and tutorials environment setup](#sparksqljl-and-tutorials-environment-setup)
 
 ### Releases:
-4. [SparkSQL.jl release 1.3.0 announcement](#sparksqljl-release-130-announcement)
+4. [SparkSQL.jl release 1.4.0 announcement](#sparksqljl-release-140-announcement)
 
-5. [SparkSQL.jl release 1.2.0 announcement](#sparksqljl-release-120-announcement)
+5. [SparkSQL.jl release 1.3.0 announcement](#sparksqljl-release-130-announcement)
 
-6. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
+6. [SparkSQL.jl release 1.2.0 announcement](#sparksqljl-release-120-announcement)
 
-7. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
+7. [SparkSQL.jl release 1.1.0 announcement](#sparksqljl-release-110-announcement)
+
+8. [SparkSQL.jl release 1.0.0 announcement](#sparksqljl-release-100-announcement)
 
 ### Tutorials:
-8. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
+9. [Introduction to SparkSQL.jl tutorial](#introduction-to-sparksqljl-tutorial)
 
-9. [Working with data tutorial](#working-with-data-tutorial)
+10. [Working with data tutorial](#working-with-data-tutorial)
 
-10. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
+11. [Machine learning with SparkSQL.jl tutorial](#machine-learning-with-sparksqljl-tutorial)
 
-11. [Scaling compute on SparkSQL.jl tutorial](#scaling-compute-on-sparksqljl-tutorial)
+12. [Scaling compute on SparkSQL.jl tutorial](#scaling-compute-on-sparksqljl-tutorial)
 
 ## Top 3 benefits of using the SparkSQL.jl Julia package
 SparkSQL.jl enables Julia programs to work with Apache Spark data using just SQL.  Here are the top 3 reasons to use Julia with Spark for data science:
@@ -77,6 +79,12 @@ The "Tutorials_SparkSQL" folder has the Julia Pluto notebook tutorials and sampl
 10. Download the tutorial Notebooks and sample data from the [Tutorials_SparkSQL](https://github.com/propelledanalytics/Tutorials/tree/main/Tutorials_SparkSQL) repository. In Pluto, navigate to where you saved the tutorial notebooks.
 11. The notebooks will run automatically. 
 
+## SparkSQL.jl release 1.4.0 announcement
+This post is announcing the release of SparkSQL.jl version 1.4.0. 
+
+New features of this release are:
+- Apache Spark 3.3.0 support.
+- Julia version 1.8 support.
 
 ## SparkSQL.jl release 1.3.0 announcement
 
